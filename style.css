@@ -173,3 +173,11 @@ header{
     background:#ff5722;
     color:white;
 }
+
+.cart{
+    background:#ff5722;
+    color:white;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:bold;
+}

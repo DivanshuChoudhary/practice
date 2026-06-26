@@ -53,3 +53,21 @@ filterButtons.forEach((button) => {
     });
 
 });
+
+const addButtons = document.querySelectorAll(".add-cart");
+
+const cartCount = document.getElementById("cart-count");
+
+let count = 0;
+
+addButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        count++;
+
+        cartCount.textContent = count;
+
+    });
+
+});
