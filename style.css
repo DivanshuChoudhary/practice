@@ -65,8 +65,7 @@ button:hover{
     width:420px;
     border-radius:15px;
 }
-
-@media(max-width:768px){
+@media(max-width:768px){}
 
 .hero{
     flex-direction:column;
@@ -129,4 +128,19 @@ header{
 
 .card button{
     margin-bottom:20px;
+}
+
+.search-section{
+    text-align:center;
+    margin:40px 0;
+}
+
+#search{
+    width:320px;
+    max-width:90%;
+    padding:12px;
+    border:2px solid #ff5722;
+    border-radius:6px;
+    outline:none;
+    font-size:16px;
 }
