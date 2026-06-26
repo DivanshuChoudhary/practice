@@ -83,3 +83,114 @@ const totalPrice = document.getElementById("total-price");
 let count = 0;
 
 let total = 0;
+
+// ==========================
+// Add To Cart
+// ==========================
+
+addButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        count++;
+
+        cartCount.textContent = count;
+
+        const card = button.parentElement;
+
+        const name = card.dataset.name;
+
+        const price = Number(card.dataset.price);
+
+        total += price;
+
+        totalPrice.textContent = total.toFixed(2);
+
+        const item = document.createElement("li");
+
+        item.innerHTML = `
+
+            <span>${name}</span>
+
+            <span>$${price.toFixed(2)}</span>
+
+            <button class="remove-btn">
+
+                Remove
+
+            </button>
+
+        `;
+
+        cartItems.appendChild(item);
+
+        const removeBtn = item.querySelector(".remove-btn");
+
+        removeBtn.addEventListener("click", () => {
+
+            item.remove();
+
+            count--;
+
+            cartCount.textContent = count;
+
+            total -= price;
+
+            totalPrice.textContent = total.toFixed(2);
+
+        });
+
+    });
+
+});
+
+
+// ==========================
+// Order Popup
+// ==========================
+
+const popup = document.getElementById("popup");
+
+const orderBtn = document.getElementById("order-btn");
+
+const closePopup = document.getElementById("close-popup");
+
+orderBtn.addEventListener("click", () => {
+
+    popup.style.display = "flex";
+
+});
+
+closePopup.addEventListener("click", () => {
+
+    popup.style.display = "none";
+
+    document.getElementById("menu").scrollIntoView({
+
+        behavior: "smooth"
+
+    });
+
+});
+
+
+// ==========================
+// Close Popup When Click Outside
+// ==========================
+
+window.addEventListener("click", (event) => {
+
+    if (event.target === popup) {
+
+        popup.style.display = "none";
+
+    }
+
+});
+
+
+// ==========================
+// Welcome Message
+// ==========================
+
+console.log("🍕 Welcome to Foodie!");
