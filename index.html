@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodie</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -17,7 +20,7 @@
         <nav>
 
             <a href="#">Home</a>
-            <a href="#">Menu</a>
+            <a href="#menu">Menu</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
 
@@ -40,15 +43,20 @@
             <h1>Delicious Food Delivered To You</h1>
 
             <p>
-                Fresh meals made with love.
+
+                Fresh meals made with love. Fast delivery and best quality food.
+
             </p>
 
-            <button>Order Now</button>
+            <button id="order-btn">
+
+                Order Now
+
+            </button>
 
         </div>
 
-        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700"
-             alt="Pizza">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700">
 
     </section>
 
@@ -79,7 +87,7 @@
 
     <!-- Menu -->
 
-    <section class="menu">
+    <section class="menu" id="menu">
 
         <h2>Popular Dishes</h2>
 
@@ -98,7 +106,9 @@
                 <p>$12.99</p>
 
                 <button class="add-cart">
+
                     Add to Cart
+
                 </button>
 
             </div>
@@ -116,7 +126,9 @@
                 <p>$9.99</p>
 
                 <button class="add-cart">
+
                     Add to Cart
+
                 </button>
 
             </div>
@@ -134,7 +146,9 @@
                 <p>$11.99</p>
 
                 <button class="add-cart">
+
                     Add to Cart
+
                 </button>
 
             </div>
@@ -165,7 +179,32 @@
 
     </section>
 
+    <!-- Popup -->
+
+    <div id="popup" class="popup">
+
+        <div class="popup-content">
+
+            <h2>🍕 Welcome to Foodie!</h2>
+
+            <p>
+
+                Explore our delicious menu and order your favourite meal.
+
+            </p>
+
+            <button id="close-popup">
+
+                Start Ordering
+
+            </button>
+
+        </div>
+
+    </div>
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
